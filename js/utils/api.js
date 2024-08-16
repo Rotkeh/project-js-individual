@@ -1,5 +1,5 @@
 // set api key here
-const apiKey = "aa5fa9834cmshbbbcd008cc8b385p170217jsn36dbe758e3d6";
+const apiKey = "";
 
 /**
  * Fetches a list of games based on the specified platform, genre, and sorting criteria.
