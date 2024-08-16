@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Browse</title>
+  </head>
+  <body>
+    <header>
+      <h1>MMO Games</h1>
+    </header>
+    <nav class="nav">
+      <div class="nav_container">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="nav_container">
+        <a href="search.html">Search</a>
+      </div>
+      <div class="nav_container">
+        <a href="browse.html">Browse</a>
+      </div>
+      <div class="nav_container">
+        <a class="saved-nav" href="saved.html">Saved</a>
+      </div>
+      <div class="nav-user_container">
+        <p class="register_button">Register</p>
+      </div>
+      <div class="nav-user_container">
+        <p class="login_button">Login</p>
+      </div>
+    </nav>
+    <main>
+      <form class="form">
+        <h3>Browse</h3>
+        <label for="lplatform">Platform</label>
+        <select id="lplatform" class="platform-select">
+          <option value="all">All</option>
+          <option value="pc">Windows</option>
+          <option value="browser">Browser</option>
+        </select>
+        <label for="lgenre">Genre</label>
+        <select id="lgenre" class="genre-select">
+          <option value="All">All</option>
+          <option value="mmo">MMO</option>
+          <option value="mmorpg">MMORPG</option>
+          <option value="shooter">Shooter</option>
+          <option value="strategy">Strategy</option>
+          <option value="moba">MOBA</option>
+          <option value="battle-royale">Battle Royale</option>
+          <option value="card">Card Game</option>
+          <option value="racing">Racing</option>
+          <option value="sports">Sports</option>
+          <option value="social">Social</option>
+          <option value="fighting">Fighting</option>
+          <option value="action-rpg">Action RPG</option>
+        </select>
+        <label for="lsort">Sort</label>
+        <select id="lsort" class="sort-select">
+          <option value="relevance">Relevance</option>
+          <option value="release-date">Release Date(Newest)</option>
+          <option value="release-date-old">Release Date(Oldest)</option>
+          <option value="popularity">Popularity</option>
+          <option value="alphabetical ">Alphabetical</option>
+        </select>
+      </form>
+      <div class="pages d-none">
+        <p>Page:</p>
+        <p class="previous-page">Previous</p>
+        <p class="page-index">index</p>
+        <p class="next-page">Next</p>
+      </div>
+      <section class="games">
+        <div class="cards"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <h6>Made by Hektor Davidsson</h6>
+      <p>©2024</p>
+    </footer>
+    <script type="module" src="js/browse.js"></script>
+  </body>
+</html>

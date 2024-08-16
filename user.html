@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Account</title>
+  </head>
+  <body>
+    <header>
+      <h1>MMO Games</h1>
+    </header>
+    <nav class="nav">
+      <div class="nav_container">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="nav_container">
+        <a href="search.html">Search</a>
+      </div>
+      <div class="nav_container">
+        <a href="browse.html">Browse</a>
+      </div>
+      <div class="nav_container">
+        <a class="saved-nav" href="saved.html">Saved</a>
+      </div>
+      <div class="nav-user_container">
+        <p class="register_button">Register</p>
+      </div>
+      <div class="nav-user_container">
+        <p class="login_button">Login</p>
+      </div>
+    </nav>
+    <main>
+      <form class="user_details-form">
+        <h3 class="user_header">Change account details</h3>
+        <p class="username"></p>
+        <label for="inputUsername">Enter new username:</label>
+        <input id="inputUsername" type="text" />
+        <p class="email"></p>
+        <label for="inputEmail">Enter new email:</label>
+        <input id="inputEmail" type="text" />
+        <label class="label_password" for="inputPassword"
+          >Enter new password:</label
+        >
+        <input id="inputPassword" type="password" />
+        <label class="label_confirm-password" for="inputConfirmPassword"
+          >Confirm new password:</label
+        >
+        <input id="inputConfirmPassword" type="password" />
+        <p class="save_error-message d-none"></p>
+        <button class="save_button" type="submit">Save</button>
+      </form>
+    </main>
+    <footer class="footer">
+      <h6>Made by Hektor Davidsson</h6>
+      <p>©2024</p>
+    </footer>
+    <script type="module" src="js/user.js"></script>
+  </body>
+</html>

@@ -1,0 +1,414 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  main {
+    flex: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(35, 185, 255, 0.589) 10%,
+      rgba(97, 207, 116, 0.521) 100%
+    );
+  }
+}
+
+/* TYPOGRAPHY */
+p,
+h3,
+label {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.75em 0;
+  color: azure;
+  font-family: "Anton", system-ui;
+}
+
+/* GLOBAL */
+header {
+  background: linear-gradient(
+    180deg,
+    rgba(7, 1, 24, 0.973) 10%,
+    rgba(35, 8, 104, 0.973) 100%
+  );
+  text-shadow: rgba(255, 255, 255, 0.664) 1px 0 10px;
+}
+
+.nav {
+  background: linear-gradient(
+    170deg,
+    rgba(224, 174, 7, 0.781) 10%,
+    rgba(255, 233, 32, 0.808) 100%
+  );
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  padding: 1em;
+  .nav_container {
+    grid-column: span 2;
+    a {
+      font-family: "Anton", system-ui;
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: 600;
+      color: black;
+      text-shadow: -2px 1px #bd00bdb9;
+    }
+  }
+  div:first-of-type {
+    grid-column: 4/6;
+  }
+  .nav-user_container {
+    display: flex;
+    justify-content: flex-end;
+    p {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      cursor: pointer;
+      font-style: italic;
+      display: inline-block;
+      text-shadow: rgb(0, 0, 0) 1px 1px;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* CARDS */
+.games {
+  margin: 0 10vw 5em 10vw;
+  > h3 {
+    font-size: 1.5rem;
+    font-family: "Anton", system-ui;
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+    font-style: italic;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 2em;
+    column-gap: 1em;
+  }
+  .card {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    padding: 1em 0.3em;
+    background-color: rgba(162, 188, 212, 0.658);
+    border-radius: 0.5em;
+    box-shadow: 0px 3px 5px 1px;
+    section {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+      cursor: pointer;
+      > p:last-of-type {
+        padding-top: 0.5em;
+        border-top: 1px dashed rgba(0, 0, 0, 0.61);
+      }
+    }
+    h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    figure {
+      img {
+        width: 100%;
+      }
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 0.5rem;
+    }
+    .save-container {
+      margin: auto auto 0 auto;
+    }
+  }
+}
+
+.footer {
+  background: linear-gradient(
+    180deg,
+    rgba(133, 119, 91, 0.774) 10%,
+    rgba(78, 70, 54, 0.877) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+  margin: 0 0 0;
+  h6 {
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+  }
+}
+
+.save-button {
+  cursor: pointer;
+  border-radius: 0.4em;
+  font-size: 1.25rem;
+  background-color: rgb(178, 107, 236);
+  padding: 0.2em 1em;
+  max-width: min-content;
+  border: 2px solid black;
+}
+.save-button:hover {
+  background-color: rgba(15, 187, 15, 0.856);
+}
+.saved-button {
+  background-color: rgb(233, 195, 92);
+}
+.saved-button:hover {
+  background-color: rgba(253, 48, 48, 0.856);
+}
+
+/* FORMS */
+.form {
+  margin: 3% 0;
+  text-align: center;
+  h3 {
+    font-family: "Anton", system-ui;
+    font-size: 2rem;
+    margin: 1.5em;
+  }
+  label {
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+  }
+  select,
+  input,
+  button {
+    font-size: 1.3rem;
+    font-family: "Roboto", sans-serif;
+    border-radius: 0.25em;
+  }
+  select:last-of-type {
+    margin-right: 0;
+  }
+}
+
+/* PAGE INDEXING */
+.pages {
+  margin: 0.5em 10vw 1em 10vw;
+  display: flex;
+  column-gap: 0.5em;
+  justify-content: flex-end;
+
+  p {
+    font-size: 1.5rem;
+    font-family: "Anton", system-ui;
+    font-weight: 100;
+  }
+  .page-index {
+    text-decoration: underline;
+  }
+  .next-page,
+  .previous-page {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+  }
+  .unclickable {
+    pointer-events: none;
+    color: rgba(92, 92, 92, 0.7);
+  }
+}
+
+/* GAME */
+.game {
+  border: 2px solid black;
+  margin: 5% 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.5em;
+  column-gap: 0.5em;
+
+  .game-figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    .game-figure_image {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    div {
+      display: flex;
+      margin: auto;
+      column-gap: 1em;
+      padding: 2em;
+    }
+  }
+  .game-content {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: subgrid;
+    column-gap: 1em;
+    row-gap: 0.5em;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.151);
+    border-radius: 2em;
+    .game_title {
+      grid-column: span 2;
+      text-align: center;
+      font-size: 2rem;
+      font-family: "Anton", system-ui;
+    }
+    .game_url {
+      font-family: "Roboto", sans-serif;
+    }
+    .game_description {
+      grid-column: span 2;
+      p {
+        margin-bottom: 0.5em;
+      }
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .game_screenshots {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: subgrid;
+    margin-top: 0.5em;
+    h3 {
+      grid-column: 1 / 4;
+      font-size: 1.5rem;
+      font-family: "Anton", system-ui;
+      margin-bottom: 0.5em;
+      text-decoration: underline;
+      font-style: italic;
+    }
+    .screenshot {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+/* LOGIN/REGISTRATION */
+.form-container {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    rgb(126, 124, 117) 10%,
+    rgb(95, 93, 86) 100%
+  );
+  padding: 5%;
+  max-width: min-content;
+  form {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-size: 3rem;
+      text-align: center;
+    }
+    label {
+      font-size: 2rem;
+    }
+    input {
+      font-size: 1.5rem;
+    }
+    button {
+      width: 75%;
+      font-size: 1.5rem;
+      margin: 0.5em auto 0 auto;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      margin: 0.5em 0;
+    }
+  }
+  .cancel-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1%;
+    border: 1px solid black;
+    padding: 0 2%;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  .error-message {
+    font-size: 1.5rem;
+    color: darkred;
+    font-weight: 600;
+    margin-top: 1em;
+  }
+}
+
+.gray-out {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.75);
+}
+
+/* USER */
+.user_details-form {
+  margin: 5% 20%;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1em;
+  padding: 0.5em;
+  .user_header {
+    grid-column: 1/ 4;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5em 0 1em 0;
+    font-family: "Anton", system-ui;
+    text-decoration: underline;
+  }
+  label,
+  button,
+  input,
+  p {
+    font-size: 1.5rem;
+  }
+  input {
+    width: 95%;
+  }
+  .label_password,
+  .label_confirm-password {
+    grid-column: 2 / 3;
+  }
+  .save_error-message {
+    margin-left: 5%;
+    grid-column: 1 / 4;
+    font-size: 1.5rem;
+    color: darkred;
+    font-weight: 600;
+  }
+  .save_button {
+    grid-column: 2 / 3;
+    margin: 1em;
+  }
+}
+
+/* OTHER */
+.d-none {
+  display: none;
+}
